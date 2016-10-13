@@ -1,0 +1,8 @@
+{{#if selectedUser}}
+  <button type="button" class="btn btn-primary btn-block" {{action 'clear'}}>
+    重置
+  </button>
+{{/if}}
+{{#each userList as |user|}}
+  <li local-class="user-item" {{action 'select' user}}>{{user.login}}</li>
+{{/each}}

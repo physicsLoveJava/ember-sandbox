@@ -1,0 +1,13 @@
+{{#unless user}}
+  <h3 class="grid -center">请在左边列表选择一个用户</h3>
+{{else}}
+  <h3 class="grid -center">{{user.login}}</h3>
+  <div class="grid -center">
+    <div class="cell -6of12">
+      <picture class="intrinsic -square">
+        <source media="(min-width: 980px)" srcset={{user.avatar_url}}>
+        <img src={{user.avatar_url}} title={{user.login}}>
+      </picture>
+    </div>
+  </div>
+{{/unless}}

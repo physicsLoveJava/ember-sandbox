@@ -1,7 +1,7 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('profile-display', 'Integration | Component | profile display', {
+moduleForComponent('display', 'Integration | Component | profile display', {
   integration: true
 });
 

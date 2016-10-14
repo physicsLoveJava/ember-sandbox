@@ -1,1 +1,10 @@
-{{yield selectUser userList}}
+{{yield (hash
+  header=(component "user-profiles/header")
+  list=(component "user-profiles/list")
+  display=(component "user-profiles/display")
+) (hash
+  selectedUser=selectedUser
+  users=users
+  selectUser=(action 'selectUser')
+  clearUser=(action 'clearUser')
+)}}

@@ -1,12 +1,9 @@
 <h2>在父子组件之间传递状态</h2>
 
-{{#user-profiles selectedUser=selectedUser userList=model as |selectedUser userList|}}
-  {{profile-header user=selectedUser}}
+{{#user-profiles model as |user api|}}
+  {{user.header api.selectedUser}}
   <div class="grid">
-    {{user-list local-class="user-list"
-      selectedUser=selectedUser userList=userList
-      select=(action 'selectUser')
-      clear=(action 'clearUser')}}
-    {{profile-display user=selectedUser}}
+    {{user.list api}}
+    {{user.display api.selectedUser}}
   </div>
 {{/user-profiles}}
